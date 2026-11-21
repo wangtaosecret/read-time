@@ -1,0 +1,8 @@
+name = "read-time"
+compatibility_date = "2026-11-21"
+
+# 纯静态站点：无 Worker 脚本、无 API、无数据库
+# assets-only Worker 不允许声明 ASSETS 绑定（只有存在 main 脚本时才需要）
+[assets]
+directory = "./public"
+not_found_handling = "single-page-application"

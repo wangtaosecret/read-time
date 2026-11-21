@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阅读时间</title>
+  <meta name="description" content="贴入文字，立刻看到字数与预计阅读分钟数。">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="head">
+      <h1>阅读时间</h1>
+      <p class="sub">贴入文字，立刻看到字数与预计阅读时间。</p>
+    </header>
+
+    <section class="panel">
+      <label class="sr-only" for="text">要统计的文字</label>
+      <textarea id="text" spellcheck="false" autofocus
+        placeholder="把文字粘贴到这里……"></textarea>
+
+      <div class="toolbar">
+        <button type="button" id="clear" class="btn">清空</button>
+        <span class="rate">按每分钟 400 字计算</span>
+      </div>
+    </section>
+
+    <section class="stats" aria-live="polite">
+      <div class="stat">
+        <div class="num" id="words">0</div>
+        <div class="lab">字数</div>
+      </div>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="stat">
+        <div class="num" id="time">不到 1 分钟</div>
+        <div class="lab">预计阅读时间</div>
+      </div>
+    </section>
+
+    <section class="meta">
+      <p class="chars">字符数（含标点）<span id="chars">0</span></p>
+      <p class="privacy">全部计算在你的浏览器里完成，文字不会上传到任何服务器。</p>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

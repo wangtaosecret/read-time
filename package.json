@@ -1,0 +1,13 @@
+{
+  "name": "read-time",
+  "version": "1.0.0",
+  "private": true,
+  "description": "阅读时间 — 贴入文字，立刻看到字数与预计阅读分钟数",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.166.0"
+  }
+}
